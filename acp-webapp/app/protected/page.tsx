@@ -12,11 +12,12 @@ export default async function ProtectedPage() {
   }
 
   return (
-    <div className="flex h-svh w-full items-center justify-center gap-2">
+    <div className="flex flex-col h-svh w-full items-center justify-center gap-2">
       <p>
         Hello <span>{data.user.email}</span>
       </p>
       <LogoutButton />
+      <pre>{JSON.stringify(data, null, 2)}</pre>
     </div>
   )
 }
