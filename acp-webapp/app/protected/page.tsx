@@ -2,7 +2,7 @@ import { redirect } from 'next/navigation'
 import { LogoutButton } from '@/components/login/logout-button'
 import { createClient } from '@/lib/supabase/server'
 import { BulkInsertButton } from '@/components/file-upload/bulk-insert-button'
-import { Header } from '@/components/ui/header'
+import { Header } from '@/components/header/header'
 
 export default async function ProtectedPage() {
   const supabase = await createClient()
