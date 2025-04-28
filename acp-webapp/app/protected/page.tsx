@@ -1,8 +1,8 @@
 import { redirect } from 'next/navigation'
-
-import { LogoutButton } from '@/components/logout-button'
+import { LogoutButton } from '@/components/login/logout-button'
 import { createClient } from '@/lib/supabase/server'
-import { BulkInsertButton } from '@/components/bulk-insert-button'
+import { BulkInsertButton } from '@/components/file-upload/bulk-insert-button'
+import { Header } from '@/components/header/header'
 
 export default async function ProtectedPage() {
   const supabase = await createClient()
@@ -40,29 +40,7 @@ export default async function ProtectedPage() {
         </nav>
       </div>
       <div className="flex-1 p-8">
-        <div className="justify-between items-center mb-8 flex">
-          <p className="text-4xl font-normal">John Jones' Dashboard</p>
-          <div className="items-center flex">
-            <button type="submit" className="mr-4 text-gray-600">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="Windframe_jIdJJk8Ya">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-              </svg>
-            </button>
-            <button type="submit" className="mr-4 text-gray-600">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="Windframe_M0m6uteLP">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
-              </svg>
-            </button>
-            <div className="items-center flex">
-              <img alt="User Avatar" src="https://placehold.co/32x32/888888/FFFFFF?text=User" className="h-8 w-8" />
-                  rounded-full">
-              <span className="ml-2">Client</span>
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="Windframe_tdd1NHyVU">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </div>
-          </div>
-        </div>
+        <Header/>
         <div className="mb-8 grid grid-cols-3 gap-8">
           <div className="col-span-2">
             <div className="mb-6">
