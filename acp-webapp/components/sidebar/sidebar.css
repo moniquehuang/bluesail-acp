@@ -1,0 +1,29 @@
+.sidebar {
+    padding: 1rem;
+}
+
+.sidebar .dashboard {
+    display: flex;
+    align-items: center;
+    color: #1e3a8a; /* text-blue-800 */
+    font-weight: 500; /* font-medium */
+    margin-bottom: 1rem;
+}
+
+.sidebar .section-title {
+    display: flex;
+    align-items: center;
+    color: #4b5563; /* text-gray-600 */
+    font-weight: 500; /* font-medium */
+    margin-bottom: 0.5rem;
+}
+
+.sidebar .sub-item {
+    margin-left: 1.5rem;
+    color: #4b5563; /* text-gray-600 */
+    margin-bottom: 0.25rem;
+}
+
+.sidebar .sub-item:last-of-type {
+    margin-bottom: 1rem;
+}
