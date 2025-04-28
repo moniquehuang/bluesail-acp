@@ -1,16 +1,17 @@
+"use client";
+
 import React from 'react';
 import './sidebar.css';
 
-const Sidebar = () => {
+const Sidebar = ({ setActiveComponent }: { setActiveComponent: (component: string) => void }) => {
     return (
         <nav className="sidebar">
-            <div className="dashboard">Dashboard</div>
-            <div className="section-title">My Investments</div>
-
-            <div className="section-title">All Funds View</div>
-            <div className="section-title">Tax Documents</div>
-            <div className="section-title">FAQs</div>
-            <div className="section-title">Settings</div>
+            <div className="section-title" onClick={() => setActiveComponent('Dashboard')}>Dashboard</div>
+            <div className="section-title" onClick={() => setActiveComponent('MyInvestments')}>My Investments</div>
+            <div className="section-title" onClick={() => setActiveComponent('AllFundsView')}>All Funds View</div>
+            <div className="section-title" onClick={() => setActiveComponent('TaxDocuments')}>Tax Documents</div>
+            <div className="section-title" onClick={() => setActiveComponent('FAQs')}>FAQs</div>
+            <div className="section-title" onClick={() => setActiveComponent('Settings')}>Settings</div>
         </nav>
     );
 };
