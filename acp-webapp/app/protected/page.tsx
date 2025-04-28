@@ -3,6 +3,7 @@ import { LogoutButton } from '@/components/login/logout-button'
 import { createClient } from '@/lib/supabase/server'
 import { BulkInsertButton } from '@/components/file-upload/bulk-insert-button'
 import { Header } from '@/components/header/header'
+import Sidebar from '@/components/sidebar/sidebar'
 
 export default async function ProtectedPage() {
   const supabase = await createClient()
@@ -26,21 +27,32 @@ export default async function ProtectedPage() {
         <div className="items-center justify-center bg-white flex p-4">
           <img alt="American Capital Partners Logo" src="https://placehold.co/120x40/FFFFFF/27ae60?text=ACP" className="h-10" />
         </div>
-        <nav className="p-4">
-          <div className="items-center text-blue-800 font-medium mb-4 flex">Dashboard</div>
-          <div className="items-center text-gray-600 font-medium mb-2 flex">My Investments</div>
-          <div className="ml-6 text-gray-600 mb-1">Space Tech</div>
-          <div className="ml-6 text-gray-600 mb-1">Cyber 2021</div>
-          <div className="ml-6 text-gray-600 mb-1">Fintech 2020</div>
-          <div className="ml-6 text-gray-600 mb-4">Software 2021</div>
-          <div className="items-center text-gray-600 font-medium mb-2 flex">All Funds View</div>
-          <div className="items-center text-gray-600 font-medium mb-2 flex">Tax Documents</div>
-          <div className="items-center text-gray-600 font-medium mb-2 flex">FAQs</div>
-          <div className="items-center text-gray-600 font-medium mb-2 flex">Settings</div>
-        </nav>
+        <Sidebar />
       </div>
       <div className="flex-1 p-8">
-        <Header/>
+        <div className="justify-between items-center mb-8 flex">
+          <p className="text-4xl font-normal">John Jones' Dashboard</p>
+          <div className="items-center flex">
+            <button type="submit" className="mr-4 text-gray-600">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="Windframe_jIdJJk8Ya">
+                <path strokeLinecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </button>
+            <button type="submit" className="mr-4 text-gray-600">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="Windframe_M0m6uteLP">
+                <path strokeLinecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+              </svg>
+            </button>
+            <div className="items-center flex">
+              <img alt="User Avatar" src="https://placehold.co/32x32/888888/FFFFFF?text=User" className="h-8 w-8" />
+                  rounded-full
+              <span className="ml-2">Client</span>
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="Windframe_tdd1NHyVU">
+                <path strokeLinecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
         <div className="mb-8 grid grid-cols-3 gap-8">
           <div className="col-span-2">
             <div className="mb-6">
@@ -64,34 +76,34 @@ export default async function ProtectedPage() {
               <div className="items-center justify-between bg-white rounded-md shadow-sm flex p-3">
                 <div className="items-center flex">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="Windframe_j77DheR0M">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    <path strokeLinecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                   </svg>
                   <span>K-1 Form</span>
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="Windframe_OZJx6YN5B">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  <path strokeLinecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                 </svg>
               </div>
               <div className="items-center justify-between bg-white rounded-md shadow-sm flex p-3">
                 <div className="items-center flex">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="Windframe_Kz8OURRrN">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                    <path strokeLinecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
                   </svg>
                   <span>Documentation</span>
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="Windframe_fUITv0uz6">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  <path strokeLinecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                 </svg>
               </div>
               <div className="items-center justify-between bg-white rounded-md shadow-sm flex p-3">
                 <div className="items-center flex">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="Windframe_efGMWT3GZ">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                    <path strokeLinecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
                   </svg>
                   <span>Talk to Fund Manager</span>
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="Windframe_uQ4xlqm1Z">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  <path strokeLinecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                 </svg>
               </div>
             </div>
