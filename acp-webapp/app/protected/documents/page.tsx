@@ -1,12 +1,10 @@
 import React from 'react';
 
-const TaxDocuments = () => {
+export default function Documents() => {
     return (
         <div>
-            <h1>Tax Documents</h1>
+            <h1>Documents</h1>
             <p>Here you can find all your tax documents.</p>
         </div>
     );
 };
-
-export default TaxDocuments;

@@ -1,6 +1,6 @@
 'use client'
 
-import { Dropzone, DropzoneContent, DropzoneEmptyState } from '@/components/dropzone'
+import { Dropzone, DropzoneContent, DropzoneEmptyState } from '@/components/file-upload/dropzone'
 import { useSupabaseUpload } from '@/hooks/use-supabase-upload'
 
 const FileUploadDemo = () => {

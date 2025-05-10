@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FAQs = () => {
+export default function FAQs() {
     return (
         <div>
             <h2>Frequently Asked Questions</h2>
@@ -8,5 +8,3 @@ const FAQs = () => {
         </div>
     );
 };
-
-export default FAQs;

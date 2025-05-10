@@ -1,12 +1,11 @@
+import { Fugaz_One } from 'next/font/google';
 import React from 'react';
 
-const MyInvestments = () => {
+export default function Investments() {
     return (
         <div>
-            <h2>My Investments</h2>
+            <h2>Investments</h2>
             {/* Add content related to user's investments here */}
         </div>
     );
 };
-
-export default MyInvestments;

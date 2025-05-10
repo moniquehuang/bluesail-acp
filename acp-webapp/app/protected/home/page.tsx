@@ -1,8 +1,10 @@
 import React from 'react';
+import { Header } from '@/components/header/header'; 
 
-const Dashboard = () => {
+export default function Home() {
 return (
     <div>
+        <Header/>
         <div className="mb-8 grid grid-cols-3 gap-8">
                 <div className="col-span-2">
                     <div className="mb-6">
@@ -109,5 +111,3 @@ return (
             </div>
     );
 };
-
-export default Dashboard;
